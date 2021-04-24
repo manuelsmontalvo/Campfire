@@ -1,14 +1,14 @@
 # Campfire
 
 ## Overview
-  Campfire is a social discussion website that allow users to create communities (campsites) based on their interests, create posts (light a fire), like posts, as well as comment. Registered users submit content to the site such as links, text posts, images, and videos.
+  Campfire is a social discussion website that allow users to create communities (campsites) based on their interests, create posts (light a fire), like posts, as well as comment. Registered users submit content to the site such as links and text posts.
 
 
 <br>
 
 ## MVP
 
-The Campfire MVP is a milti-page bloging site with full CRUD capabilities. Users will be able to create communities, posts, comments and sub comments. As well as like posts they are interested in, edit thier past posts and delete them.
+The Campfire MVP is a milti-page bloging site with full CRUD capabilities. Users will be able to create communities, posts and comments. As well as like posts they are interested in, edit thier past posts and delete them.
 
 <br>
 
@@ -31,7 +31,6 @@ The Campfire MVP is a milti-page bloging site with full CRUD capabilities. Users
 | React SemanticUI | For the UI of posts and comments.          |
 |  Ruby on Rails   | Back-end.                                  |
 |  Pry - Rails     | Allows us to use pry insetad of IRB.       |
-|  reactjs-media   | Allows vudeo capabilities.                 |
 | react-flip-move  | Animation for when new posts are created/deleted |
 | react-parallax   | parallax package                           |
 
@@ -58,12 +57,25 @@ Component Tree: https://whimsical.com/p4-48VghggHeRevpAmLnWLGuw
 src
 |__ assets/
       |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
-|__ components/
-      |__ Header.jsx
-|__ services/
+      |__ graphic
+|__ screens/
+      |__ EditPost.jsx
+      |__ PostDetails.jsx
+      |__ MainFeed.jsx
+      |__ Profile.jsx
+      |__ CampsiteFeed.jsx
+      |__ SignIn.jsx
+      |__ SignOut.jsx
+|__ container/
+      |__ MainContainer.jsx
+|__ layout/
+      |__ Layout.jsx
+|__ sevices
+      |__ AuthHelper.js
+      |__ Auth.js
+      |__ Campsites.js
+      |__ Posts.js
+      |__ Comments.js
 
 ```
 
