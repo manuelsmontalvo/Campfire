@@ -47,9 +47,7 @@ Figma: https://www.figma.com/file/F62mttxfyr8pEWiaQc85D0/Campfire?node-id=0%3A1
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
-
-[Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
+Component Tree: https://whimsical.com/p4-48VghggHeRevpAmLnWLGuw
 
 #### Component Architecture
 
