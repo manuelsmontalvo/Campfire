@@ -8,31 +8,32 @@
 
 ## MVP
 
-The Campfire MVP is a full CRUD API utilizing Ruby on Rails with a React front end. Users will be able to create communities that other users and themselves can create posts that can contain links, text posts, images, and videos.
+The Campfire MVP is a milti-page bloging site with full CRUD capabilities. Users will be able to create communities, posts, comments and sub comments. As well as like posts they are interested in, edit thier past posts and delete them.
 
 <br>
 
 ### Goals
 
-- Full Crud Back-End
-- 3 Data Tables
-- 8 Components
-- 75 commits minimum
+- Edit & delete posts
+- Comments and sub comments functionality
+- Create communities based on interests
+- Search based on topics
 - Responsive design
 
 <br>
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
-
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | Front end.                                 |
+|   React Router   | Handle routes.                             |
+| React SemanticUI | For the UI of posts and comments.          |
+|  Ruby on Rails   | Back-end.                                  |
+|  Pry - Rails     | Allows us to use pry insetad of IRB.       |
+|  reactjs-media   | Allows vudeo capabilities.                 |
+| react-flip-move  | Animation for when new posts are created/deleted |
+
 
 <br>
 
