@@ -33,6 +33,7 @@ The Campfire MVP is a milti-page bloging site with full CRUD capabilities. Users
 |  Pry - Rails     | Allows us to use pry insetad of IRB.       |
 |  reactjs-media   | Allows vudeo capabilities.                 |
 | react-flip-move  | Animation for when new posts are created/deleted |
+| react-parallax   | parallax package                           |
 
 
 <br>
