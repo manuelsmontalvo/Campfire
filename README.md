@@ -2,24 +2,18 @@
 
 ## Overview
   Campfire is a social discussion website that allow users to create communities (campsites) based on their interests, create posts (light a fire), like posts, as well as comment. Registered users submit content to the site such as links and text posts.
-
-
 <br>
 
 ## MVP
-
 The Campfire MVP is a milti-page bloging site with full CRUD capabilities. Users will be able to create communities, posts and comments. As well as like posts they are interested in, edit thier past posts and delete them.
-
 <br>
 
 ### Goals
-
 - Edit & delete posts
 - Comments and sub comments functionality
 - Create communities based on interests
 - Search based on topics
 - Responsive design
-
 <br>
 
 ### Libraries and Dependencies
@@ -33,25 +27,17 @@ The Campfire MVP is a milti-page bloging site with full CRUD capabilities. Users
 |  Pry - Rails     | Allows us to use pry insetad of IRB.       |
 | react-flip-move  | Animation for when new posts are created/deleted |
 | react-parallax   | parallax package                           |
-
-
 <br>
 
-### Client (Front End)
+## Client (Front End)
 
 #### Wireframes
-
 Figma: https://www.figma.com/file/F62mttxfyr8pEWiaQc85D0/Campfire?node-id=0%3A1
 
-
 #### Component Tree
-
 Component Tree: https://whimsical.com/p4-48VghggHeRevpAmLnWLGuw
 
 #### Component Architecture
-
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
-
 ``` structure
 
 src
@@ -96,10 +82,7 @@ src
 ### Server (Back End)
 
 #### ERD Model
-
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
-
-[ERD Sample](https://drive.google.com/file/d/1kLyQTZqfcA4jjKWQexfEkG2UspyclK8Q/view)
+draw.io: https://drive.google.com/file/d/1ArvE_cFk2NVMvxs2Tkb03mFQzyCenz7R/view?usp=sharing
 <br>
 
 ***
@@ -110,8 +93,6 @@ src
 - Bookmarking campsites
 - Bookmarking posts
 - Search for campsites
-
-***
 
 ## Code Showcase
 
