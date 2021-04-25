@@ -67,15 +67,23 @@ src
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
-
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
-
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
+| Models & Routes     |    H     |     3 hrs      |      hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |      hrs     |     TBD     |
+| Auth controllers    |    H     |     3 hrs      |      hrs     |     TBD     |
+| Table Controllers   |    H     |     3 hrs      |      hrs     |     TBD     |
+| CORS                |    H     |     1 hrs      |      hrs     |     TBD     |
+| Routes              |    H     |     2 hrs      |      hrs     |     TBD     |
+| Join Tables         |    H     |     2 hrs      |      hrs     |     TBD     |
+| Screens             |    H     |     4 hrs      |      hrs     |     TBD     |
+| Main Container      |    M     |     3 hrs      |      hrs     |     TBD     |
+| Auth Services       |    M     |     4 hrs      |      hrs     |     TBD     |
+| API helper          |    M     |     2 hrs      |      hrs     |     TBD     |
+| Services for tables |    L     |     4 hrs      |      hrs     |     TBD     |
+| CSS animation       |    L     |     2 hrs      |      hrs     |     TBD     |
+| Styling of pages    |    M     |     4 hrs      |      hrs     |     TBD     |
+| TOTAL               |          |    40 hrs      |      hrs     |     TBD     |
 
 <br>
 
