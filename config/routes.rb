@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  resources :likes
+  resources :likes, :except [:update]
   resources :comments
   resources :posts
   resources :blogs
