@@ -1,4 +1,5 @@
 class LikesController < ApplicationController
+  before_action :authorize_request, only: [:create, :update, :destroy]
   before_action :set_like, only: [:show, :update, :destroy]
 
   # GET /likes
@@ -8,26 +9,12 @@ class LikesController < ApplicationController
     render json: @likes
   end
 
-  # GET /likes/1
-  def show
-    render json: @like
-  end
-
   # POST /likes
   def create
     @like = Like.new(like_params)
-
+    @like.user = @current_user
     if @like.save
       render json: @like, status: :created
-    else
-      render json: @like.errors, status: :unprocessable_entity
-    end
-  end
-
-  # PATCH/PUT /likes/1
-  def update
-    if @like.update(like_params)
-      render json: @like
     else
       render json: @like.errors, status: :unprocessable_entity
     end
