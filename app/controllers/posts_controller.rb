@@ -4,20 +4,21 @@ class PostsController < ApplicationController
 
   # GET /posts
   def index
-    @posts = Post.all
+    @blog = Blog.find(params[:blog_id])
 
-    render json: @posts
+    render json: @blog.posts
   end
 
   # GET /posts/1
   def show
-    render json: @post
+    render json: @post, include: [{comments: {include: :likes}}, :likes]
   end
 
   # POST /posts
   def create
     @post = Post.new(post_params)
     @post.user = @current_user
+
     if @post.save
       render json: @post, status: :created
     else
@@ -47,6 +48,6 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:user_id, :blog_id, :content)
+      params.require(:post).permit( :blog_id, :content)
     end
 end
