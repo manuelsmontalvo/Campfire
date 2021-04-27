@@ -1,38 +1,24 @@
 class LikesController < ApplicationController
-  before_action :authorize_request, only: [:create, :update, :destroy]
-  before_action :set_like, only: [:show, :update, :destroy]
+  before_action :authorize_request, only: [:toggle_post_like, :toggle_comment_like]
 
-  # GET /likes
-  def index
-    @likes = Like.all
-
-    render json: @likes
+  def toggle_post_like
+    @post = Post.find(params[:id])
+    if @current_user.post_likes.include?(@post)
+      @current_user.post_likes.delete(@post)
+    else 
+      @current_user.post_likes.push(@post)
+    end
+    render json: @post,  include: [{comments: {include: :likes}}, :likes]
   end
 
-  # POST /likes
-  def create
-    @like = Like.new(like_params)
-    @like.user = @current_user
-    if @like.save
-      render json: @like, status: :created
-    else
-      render json: @like.errors, status: :unprocessable_entity
+  def toggle_comment_like
+    @comment = Comment.find(params[:id])
+    if @current_user.comment_likes.include?(@comment)
+      @current_user.pcomment_likes.delete(@comment)
+    else 
+      @current_user.comment_likes.push(@comment)
     end
+    render json: @comment.post,  include: [{comments: {include: :likes}}, :likes]
   end
 
-  # DELETE /likes/1
-  def destroy
-    @like.destroy
-  end
-
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_like
-      @like = Like.find(params[:id])
-    end
-
-    # Only allow a list of trusted parameters through.
-    def like_params
-      params.require(:like).permit(:user_id, :post_id, :comment_id)
-    end
 end
