@@ -1,4 +1,5 @@
 class BlogsController < ApplicationController
+  before_action :authorize_request, only: [:create, :update, :destroy]
   before_action :set_blog, only: [:show, :update, :destroy]
 
   # GET /blogs
@@ -16,7 +17,6 @@ class BlogsController < ApplicationController
   # POST /blogs
   def create
     @blog = Blog.new(blog_params)
-
     if @blog.save
       render json: @blog, status: :created
     else
