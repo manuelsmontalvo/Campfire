@@ -25,20 +25,12 @@ class BlogsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /blogs/1
-  def update
-    if @blog.update(blog_params)
-      render json: @blog
-    else
-      render json: @blog.errors, status: :unprocessable_entity
-    end
-  end
-
   # DELETE /blogs/1
   def destroy
     @blog.destroy
   end
 
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_blog

@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   
   resources :likes, :except => [:update]
   resources :comments
-  resources :posts
-  resources :blogs
+  resources :posts, :except => [:index]
+  resources :blogs do 
+    resources :post, only: [:index] 
+  end
   resources :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
