@@ -1,12 +1,12 @@
-// CSS
 import './App.css';
-// packages
 import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom'
-// components
+
 import Layout from './layouts/Layout';
 import Login from './screens/Login';
-import Register from './screens/Register';
+import SignUp from './screens/SignUp';
+
+
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 import MainContainer from './containers/MainContainer';
 
@@ -53,8 +53,8 @@ function App() {
               handleLogin={handleLogin}
             />
           </Route>
-          <Route path='/register'>
-            <Register
+          <Route path='/signup'>
+            <SignUp
               handleRegister={handleRegister}
             />
           </Route>
