@@ -8,7 +8,7 @@ import SignUp from './screens/SignUp';
 
 
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
-import MainContainer from './containers/MainContainer';
+import MainContainer from './container/MainContainer';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);

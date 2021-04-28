@@ -1,0 +1,32 @@
+.nav {
+display: flex;
+flex-flow: row wrap;
+justify-content: space-around;
+align-content: center;
+text-align: center;
+height: 60px;
+color: rgba(255, 254, 254, 0.55);
+background: linear-gradient(92.55deg, rgba(255, 254, 254, 0.4) 37.62%, rgba(255, 255, 255, 0.1) 59.33%);
+box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2), 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+backdrop-filter: blur(40px);
+}
+
+.nav > p{
+  margin: auto 0;
+}
+
+.title {
+  font-weight: bolder;
+  text-shadow:rgba(255, 255, 255, 0.1);
+  font-size: 30px;
+  margin: auto 0;
+  color: rgba(255, 254, 254, 0.776);
+}
+
+.login_link {
+  height: fit-content;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-decoration: none;
+  color: rgba(255, 254, 254, 0.55);
+}
