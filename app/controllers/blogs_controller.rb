@@ -10,15 +10,13 @@ class BlogsController < ApplicationController
   end
 
   # GET /blogs/1
-  def show
-    # render json: @blog , include: [{posts: {include: => [:likes, :comments]} }]
+  def show 
     render json: @blog , include: [{posts: {include: [:likes, :comments]}}]
   end
 
   # POST /blogs
   def create
     @blog = Blog.new(blog_params)
-    @blog.user = @current_user
     if @blog.save
       render json: @blog, status: :created
     else
