@@ -5,11 +5,8 @@ Rails.application.routes.draw do
   post '/toggle-comment-like/:id', to: 'likes#toggle_comment_like'
   
   resources :comments, :except => [:update, :index, :show]
-  resources :posts, :except => [:index]
-  resources :blogs, :except => [:update] do 
-    resources :post, only: [:index] 
-  end
-  
+  resources :posts
+  resources :blogs, :except => [:update] 
   resources :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
