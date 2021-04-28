@@ -17,7 +17,7 @@ export default function Layout(props) {
               <button className = "logout_btn" onClick={handleLogout}>Logout</button>
             </>
             :
-            <Link className = "login_link" to='/signup'>Login</Link>
+            <Link className = "login_link" to='/login'>Login</Link>
         }
       </div>
       {props.children}
