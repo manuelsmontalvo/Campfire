@@ -12,7 +12,23 @@ import React from 'react'
 export default function MainContainer() {
   return (
     <div>
-      <h1></h1>
+      <Switch>
+        <Route path='/'>
+          <Main/>
+      </Route>
+        <Route path='/posts/:id/edit'>
+          <EditPost/>
+      </Route>
+        <Route path='/posts/:id'>
+          <PostDetail/>
+      </Route>
+        <Route path='/blogs/:id'>
+        <Campsite/>
+      </Route>
+        <Route path='/users/:id'>
+        <Profile/>
+      </Route>
+    </Switch>
     </div>
   )
 }

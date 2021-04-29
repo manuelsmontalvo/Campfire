@@ -4,21 +4,21 @@ import "../css/layout.css"
 
 export default function Layout(props) {
   const { currentUser, handleLogout } = props;
-
+  
   return (
     <div>
       <div className = "nav">
       <p className="title">Campfire</p>
-      <p>Profile</p>
-      <p>Campsites</p>
+      <Link className="nav_link" to="/">Campsites</Link>
+        <Link className="nav_link" to={`/users/${currentUser?.id}`}>Profile</Link>
       {
-          currentUser ?
-            <>
+        currentUser ?
+        <>
               <button className = "logout_btn" onClick={handleLogout}>Logout</button>
             </>
             :
             <Link className = "login_link" to='/login'>Login</Link>
-        }
+          }
       </div>
       {props.children}
     </div>
