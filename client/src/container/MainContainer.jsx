@@ -7,14 +7,40 @@ import Main from '../screens/Main';
 import PostDetail from '../screens/PostDetail';
 import Profile from '../screens/Profile';
 
-import React from 'react'
+import {getAllBlogs, createBlog, deleteblog} from '../services/blogs'
 
 export default function MainContainer() {
+  const [blogs, setBlogs] = useState([])
+  const history = useHistory();
+
+useEffect(() => {
+  const getBlogs = async () => {
+    const blogData = await getAllBlogs();
+    setBlogs(blogData);
+  }
+  getBlogs()
+}, [])
+  
+const handleCreate = async (fromData) => {
+  const blogData = await createBlog(fromData);
+  setBlogs(prevState => [...prevState, blogData])
+  history.push('/')
+}
+  
+const handleDelete = async (id) => {
+  await deleteblog(id);
+  setBlogs(prevState => prevState.filter(blog => blog.id !== id))
+}
+
   return (
     <div>
       <Switch>
         <Route path='/'>
-          <Main/>
+          <Main
+            blogs={blogs}
+            handleCreate={handleCreate}
+            handleDelete={handleDelete}
+          />
       </Route>
         <Route path='/posts/:id/edit'>
           <EditPost/>
