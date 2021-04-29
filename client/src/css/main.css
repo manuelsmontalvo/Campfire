@@ -1,9 +1,43 @@
+.blogs {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+
 .blog_div {
-  width: 450px;
-  height: 363px;
+  display: flex;
+  flex-flow: column;
+  width: 250px;
+  height:200px;
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
   background: linear-gradient(92.55deg, rgba(255, 254, 254, 0.4) 37.62%, rgba(255, 255, 255, 0.1) 59.33%);
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2), 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(40px);
+  backdrop-filter: blur(20px);
   /* Note: backdrop-filter has minimal browser support */
   border-radius: 40px;
+}
+
+.blog_div > p {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 27px;
+  text-align: center;
+  color: rgba(255, 254, 254, 0.85);
+}
+
+.blog_topic{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog_desc {
+  margin-left: auto;
+  margin-right: auto;
+  width: 210px;
+  text-align: center;
 }
