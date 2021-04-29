@@ -35,14 +35,14 @@ const handleDelete = async (id) => {
   return (
     <div>
       <Switch>
-        <Route path='/'>
+        <Route exact path='/'>
           <Main
             blogs={blogs}
             handleCreate={handleCreate}
             handleDelete={handleDelete}
           />
       </Route>
-        <Route path='/posts/:id/edit'>
+        <Route exact path='/posts/:id/edit'>
           <EditPost/>
       </Route>
         <Route path='/posts/:id'>

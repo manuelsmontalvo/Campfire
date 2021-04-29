@@ -1,5 +1,6 @@
 import "../css/main.css";
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 
 export default function Main({ blogs, handleCreate, handleDelete }) {
   const [formData, setFormData] = useState({
@@ -51,11 +52,18 @@ export default function Main({ blogs, handleCreate, handleDelete }) {
       </form>
       <div className="blog_container">
         {blogs.map((blog) => (
+              <Link to='/blogs/:id'>
           <div className="blog_div">
-            <p className="blog_topic">{blog.topic}</p>
-            <p className="blog_desc">{blog.description}</p>
-            <button className="delete_btn">Put Out</button>
-          </div>
+              <p className="blog_topic">{blog.topic}</p>
+              <p className="blog_desc">{blog.description}</p>
+              <button
+                className="delete_btn"
+                onClick={(e) => handleDelete(blog.id)}
+                >
+                Put Out
+              </button>
+            </div>
+                </Link>
         ))}
       </div>
     </div>

@@ -131,6 +131,14 @@
   border-radius: 40px;
 }
 
+.blog_container > a {
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  width: fit-content;
+  height: fit-content;
+}
+
 @media only screen and (max-width: 1300px) {
   
   .blog_div {
