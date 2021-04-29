@@ -7,14 +7,24 @@ import Main from '../screens/Main';
 import PostDetail from '../screens/PostDetail';
 import Profile from '../screens/Profile';
 
-import React from 'react'
+import {getAllBlogs} from '../services/blogs'
 
 export default function MainContainer() {
+const [blogs, setBlogs] = useState([])
+
+useEffect(() => {
+  const getBlogs = async () => {
+    const blogData = await getAllBlogs();
+    setBlogs(blogData);
+  }
+  getBlogs()
+}, [])
+
   return (
     <div>
       <Switch>
         <Route path='/'>
-          <Main/>
+          <Main blogs={blogs}/>
       </Route>
         <Route path='/posts/:id/edit'>
           <EditPost/>
