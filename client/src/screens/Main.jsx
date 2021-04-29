@@ -54,7 +54,17 @@ export default function Main({ blogs, handleCreate, handleDelete }) {
           <div className="blog_div">
             <p className="blog_topic">{blog.topic}</p>
             <p className="blog_desc">{blog.description}</p>
-            <button className="delete_btn">Put Out</button>
+            <div className="button_div">
+              <button
+                className="delete_btn"
+                onClick={() => handleDelete(blog.id)}
+              >
+                Put Out
+              </button>
+              <a href={`/blogs/${blog.id}`}>
+                <button className="delete_btn">Spark</button>
+              </a>
+            </div>
           </div>
         ))}
       </div>

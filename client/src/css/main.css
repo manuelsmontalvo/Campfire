@@ -131,6 +131,13 @@
   border-radius: 40px;
 }
 
+.button_div {
+  display: flex;
+  flex-flow: row;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media only screen and (max-width: 1300px) {
   
   .blog_div {
