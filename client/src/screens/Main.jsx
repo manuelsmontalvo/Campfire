@@ -1,19 +1,38 @@
 import "../css/main.css";
+import { useState } from "react";
 
-export default function Main({ blogs, handleCreate, handleDelete}) {
-  
+export default function Main({ blogs, handleCreate, handleDelete }) {
+  const [formData, setFormData] = useState({
+    topic: "",
+    description: "",
+  });
+  const { topic, description } = formData;
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
 
   return (
     <div className="blogs">
-      <form className="create_form">
+      <form
+        className="create_form"
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleCreate(formData);
+        }}
+      >
         <input
           maxLength="15"
           className="topic_input"
           placeholder="Topic..."
           type="text"
           name="topic"
-          // value={}
-          // onChange={}
+          value={topic}
+          onChange={handleChange}
         />
         <br />
         <textarea
@@ -24,8 +43,8 @@ export default function Main({ blogs, handleCreate, handleDelete}) {
           placeholder="description..."
           type="text"
           name="description"
-          // value={}
-          // onChange={}
+          value={description}
+          onChange={handleChange}
         />
         <br />
         <button className="create_btn">Submit</button>

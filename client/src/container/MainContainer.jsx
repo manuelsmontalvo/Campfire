@@ -24,7 +24,7 @@ useEffect(() => {
 const handleCreate = async (fromData) => {
   const blogData = await createBlog(fromData);
   setBlogs(prevState => [...prevState, blogData])
-  history.push('/foods')
+  history.push('/')
 }
   
 const handleDelete = async (id) => {
