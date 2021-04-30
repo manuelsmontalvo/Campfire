@@ -8,9 +8,12 @@ import PostDetail from "../screens/PostDetail";
 import Profile from "../screens/Profile";
 
 import { getAllBlogs, createBlog, deleteblog } from "../services/blogs";
+import { getPost, deletePost, updatePost } from "../services/posts";
+
 
 export default function MainContainer({ currentUser }) {
   const [blogs, setBlogs] = useState([]);
+  const [post, setPost] = useState([]);
   const history = useHistory();
 
   useEffect(() => {
@@ -32,6 +35,8 @@ export default function MainContainer({ currentUser }) {
     setBlogs((prevState) => prevState.filter((blog) => blog.id !== id));
   };
 
+  
+
   return (
     <div>
       <Switch>
@@ -49,7 +54,9 @@ export default function MainContainer({ currentUser }) {
           <PostDetail />
         </Route>
         <Route path="/blogs/:id">
-          <Campsite currentUser={currentUser} />
+          <Campsite
+            currentUser={currentUser}
+          />
         </Route>
         <Route path="/users/:id">
           <Profile />

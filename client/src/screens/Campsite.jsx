@@ -1,12 +1,30 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getOneBlog } from "../services/blogs";
-import {length} from '../services/interactionCount'
+import { length } from '../services/interactionCount'
+import { createPost } from "../services/posts";
 import "../css/campsite.css";
 
 export default function Campsite({ currentUser }) {
   const { id } = useParams();
   const [post, setPost] = useState(null);
+  const [formData, setFormData] = useState({
+    content: "",
+  });
+  const { content } = formData;
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const makePost = async (formData) => {
+    const postData = await createPost(formData);
+    setPost(postData)
+  }
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -15,11 +33,7 @@ export default function Campsite({ currentUser }) {
     };
     fetchPost();
   }, []);
-  console.log(post?.posts);
 
-  // function length(obj) {
-  //   return Object.keys(obj).length;
-  // }
 
   return (
     <div className="campsite">
@@ -34,7 +48,7 @@ export default function Campsite({ currentUser }) {
             className="campsite_form"
             onSubmit={(e) => {
               e.preventDefault();
-              getOneBlog();
+              makePost({...formData, blog_id: id});
             }}
           >
             <textarea
@@ -45,12 +59,12 @@ export default function Campsite({ currentUser }) {
               placeholder="Post..."
               type="text"
               name="content"
-              // value={content}
-              // onChange={}
+              value={content}
+              onChange={handleChange}
             />
             <br />
-          </form>
             <button className="post_create_btn">Submit</button>
+          </form>
         </div>
       </div>
       {post?.posts.map((post) => (
