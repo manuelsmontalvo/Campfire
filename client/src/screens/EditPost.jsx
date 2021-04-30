@@ -1,13 +1,13 @@
 import React from 'react'
 import '../css/editpost.css'
 import {updateBlog} from "../services/blogs.js"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useHistory } from 'react-router-dom';
 
 
 
-export default function EditPost() {
+export default function EditPost({blogs, setBlogs}) {
   const [formData, setFormData] = useState({
     topic: '',
     description: ''
@@ -17,6 +17,18 @@ export default function EditPost() {
 
   const history = useHistory();
 
+  useEffect(() => {
+    console.log(blogs)
+    const blog = blogs.find(blog => {
+      console.log(blog.id, id);
+      return blog.id === parseInt(id)  
+    })    
+    setFormData({
+      topic: blog?.topic,
+      description: blog?.description
+    })
+  }, [blogs]);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
@@ -25,8 +37,17 @@ export default function EditPost() {
     }))
   }
 
-  const handleEdit = async (id, formData) => {
-    await updateBlog(id, formData);
+
+  const handleUpdateBlogs = (blogData) => {
+    const updatedBlogs = blogs.map( blog => (
+       blog.id === parseInt(id) ?   blogData : blog
+    ))
+    return updatedBlogs
+  }
+
+  const handleEdit = async (id, blogData) => {
+    await updateBlog(id, blogData);
+    setBlogs(handleUpdateBlogs(blogData))
     history.push('/')
   }
 
