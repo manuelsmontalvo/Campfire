@@ -22,6 +22,8 @@ export default function MainContainer({ currentUser }) {
     getBlogs();
   }, []);
 
+
+
   const handleCreate = async (fromData) => {
     const blogData = await createBlog(fromData);
     setBlogs((prevState) => [...prevState, blogData]);
@@ -46,7 +48,10 @@ export default function MainContainer({ currentUser }) {
           />
         </Route>
         <Route exact path="/blogs/:id/edit">
-          <EditPost />
+          <EditPost 
+          setBlogs={setBlogs}
+          blogs={blogs}
+            />
         </Route>
         <Route path="/posts/:id">
           <PostDetail 
