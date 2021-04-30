@@ -76,9 +76,9 @@
 }
 
 .blog_div > p {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: bolder;
   text-align: center;
   color: rgba(255, 254, 254, 0.85);
 }
