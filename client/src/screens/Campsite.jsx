@@ -27,13 +27,13 @@ export default function Campsite({ currentUser }) {
     setPost(postData)
   }
 
-  useEffect(() => {
-    const fetchPost = async () => {
-      const blogData = await getOneBlog(id);
-      setPost(blogData);
-    };
-    fetchPost();
-  }, []);
+  // useEffect(() => {
+  //   const fetchPost = async () => {
+  //     const blogData = await getOneBlog(id);
+  //     setPost(blogData);
+  //   };
+  //   fetchPost();
+  // },[]);
 
 
   return (
