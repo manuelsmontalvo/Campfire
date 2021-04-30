@@ -18,16 +18,14 @@ export default function EditPost({blogs, setBlogs}) {
   const history = useHistory();
 
   useEffect(() => {
-    console.log(blogs)
     const blog = blogs.find(blog => {
-      console.log(blog.id, id);
       return blog.id === parseInt(id)  
     })    
     setFormData({
       topic: blog?.topic,
       description: blog?.description
     })
-  }, [blogs]);
+  }, [id, blogs]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
