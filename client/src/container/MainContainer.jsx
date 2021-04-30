@@ -12,7 +12,6 @@ import { getAllBlogs, createBlog, deleteblog } from "../services/blogs";
 
 export default function MainContainer({ currentUser }) {
   const [blogs, setBlogs] = useState([]);
-  const [post, setPost] = useState([]);
   const history = useHistory();
 
   useEffect(() => {
