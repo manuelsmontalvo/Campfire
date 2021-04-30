@@ -9,8 +9,8 @@ The Campfire MVP is a milti-page bloging site with full CRUD capabilities. Users
 <br>
 
 ### Goals
-- Edit & delete posts
-- Comments
+- Edit & delete blogs
+- like posts
 - Create communities 
 - Make Posts
 - Responsive design
