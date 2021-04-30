@@ -10,6 +10,11 @@ export const getOneBlog = async (id) => {
   return resp.data;
 }
 
+export const updateBlog = async (id, blogData) => {
+  const resp = await api.put(`/blogs/${id}`, { blog: blogData });
+  return resp.data
+}
+
 export const createBlog = async (blogData) => {
   const resp = await api.post('/blogs', { blog: blogData })
   return resp.data

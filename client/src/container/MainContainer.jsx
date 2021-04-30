@@ -47,11 +47,13 @@ export default function MainContainer({ currentUser }) {
             handleDelete={handleDelete}
           />
         </Route>
-        <Route exact path="/posts/:id/edit">
+        <Route exact path="/blogs/:id/edit">
           <EditPost />
         </Route>
         <Route path="/posts/:id">
-          <PostDetail />
+          <PostDetail 
+          currentUser={currentUser}
+          />
         </Route>
         <Route path="/blogs/:id">
           <Campsite

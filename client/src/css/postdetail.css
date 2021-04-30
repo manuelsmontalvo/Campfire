@@ -1,0 +1,117 @@
+.postDetail{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px
+}
+
+.comment_form {
+  border-radius: 40px;
+  display: flex;
+  flex-flow: row;
+  width: 800px;
+  min-width: 400px;
+  height: 200px;
+  margin-bottom: 50px;
+  margin-top: 60px;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    92.55deg,
+    rgba(255, 254, 254, 0.4) 37.62%,
+    rgba(255, 255, 255, 0.1) 59.33%
+  );
+  box-shadow: 0px 4.58462px 27.5077px -1.14615px rgba(0, 0, 0, 0.2),
+    0px 4.58462px 27.5077px -1.14615px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(45.8461px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 45.8461px;
+}
+
+.post_detail_div {
+  display: flex;
+  flex-flow: row;
+  width: 800px;
+  height: 400px;  
+  min-width: 400px;
+  margin-bottom: 50px;
+  background: linear-gradient(92.55deg, rgba(255, 254, 254, 0.4) 37.62%, rgba(255, 255, 255, 0.1) 59.33%);
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2), 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 40px;
+}
+
+.post_user_info {
+  align-self: center;
+  margin-top: 10px;
+  margin-left: 100px;
+  margin-right: 50px;
+}
+
+.post_detail_interactions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.post_interactions_btn {
+  background: none;
+  border: none;
+}
+
+.comment_create_btn {
+  width: 197px;
+  height: 53px;
+  margin-left: 100px;
+  font-size: 25px;
+  line-height: 34px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  background: linear-gradient(
+    92.55deg,
+    rgba(255, 254, 254, 0.4) 37.62%,
+    rgba(255, 255, 255, 0.1) 59.33%
+  );
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 40px;
+}
+
+.comment_div {
+  display: flex;
+  flex-flow: row;
+  width: 800px;
+  height: 250px;
+  padding: 20px;  
+  min-width: 400px;
+  margin-bottom: 50px;
+  background: linear-gradient(92.55deg, rgba(255, 254, 254, 0.4) 37.62%, rgba(255, 255, 255, 0.1) 59.33%);
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2), 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 40px;
+}
+
+.comment_form > textarea {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  height: 150px;
+  background: none;
+  color: rgba(255, 255, 255, 0.55);
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 20px;
+  line-height: 54px;
+  text-align: center;
+  border: 1px solid rgba(255, 254, 254, 0.55);
+  box-sizing: border-box;
+  background-color: rgba(187, 187, 187, 0.666);
+}
