@@ -29,6 +29,13 @@ class BlogsController < ApplicationController
     @blog.destroy
   end
 
+  def update
+    if @blog.update(blog_params)
+      render json: @blog
+    else
+      render json: @blog.errors, status: :unprocessable_entity
+    end
+  end
   
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -64,6 +64,9 @@ export default function Main({ blogs, handleCreate, handleDelete }) {
               <a href={`/blogs/${blog.id}`}>
                 <button className="delete_btn">Spark</button>
               </a>
+              <a href={`/blogs/${blog.id}/edit`}>
+                <button className="delete_btn">Update</button>
+              </a>
             </div>
           </div>
         ))}

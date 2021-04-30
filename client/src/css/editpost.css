@@ -1,0 +1,9 @@
+.editdiv {
+  display: flex;
+  justify-content: center;
+  align-content:center;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
