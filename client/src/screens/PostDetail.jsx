@@ -1,6 +1,6 @@
 import React from 'react'
 import {getPost} from "../services/posts"
-import {createComment, deleteComment} from "../services/comments"
+import {createComment} from "../services/comments"
 import { length } from '../services/interactionCount'
 import { togglePostLikes } from "../services/likes";
 import { useState, useEffect } from "react";
@@ -18,7 +18,7 @@ export default function PostDetail({currentUser}) {
   const { content } = formData;
 
   useEffect(() => {
-    const fetchPost = async () => {
+    const fetchPost = async (id) => {
       const postData = await getPost(id);
       setPost(postData);
     };
