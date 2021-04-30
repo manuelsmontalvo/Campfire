@@ -1,7 +1,7 @@
 import React from 'react'
 import '../css/editpost.css'
 import {updateBlog} from "../services/blogs.js"
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useHistory } from 'react-router-dom';
 
@@ -26,8 +26,7 @@ export default function EditPost() {
   }
 
   const handleEdit = async (id, formData) => {
-    const blogData = await updateBlog(id, formData);
-    
+    await updateBlog(id, formData);
     history.push('/')
   }
 
