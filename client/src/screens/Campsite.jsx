@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { getOneBlog } from "../services/blogs";
 import { length } from '../services/interactionCount'
 import { createPost } from "../services/posts";
+import { togglePostLikes } from "../services/likes";
 import "../css/campsite.css";
 
 export default function Campsite({ currentUser }) {
@@ -74,11 +75,11 @@ export default function Campsite({ currentUser }) {
             <p>{post.user.username}</p>
             <div className="interactions">
               <p>
-                <button className='interactions_btn'>💬</button>
+                <a href={`/posts/${post.id}`}><button className='interactions_btn'>💬</button></a>
                 {length(post.comments)}
               </p>
               <p>
-                <button className='interactions_btn'>👍🏽</button>
+                <button className='interactions_btn' onClick={()=>togglePostLikes(post.id)}>👍🏽</button>
                 {length(post.likes)}
               </p>
             </div>
