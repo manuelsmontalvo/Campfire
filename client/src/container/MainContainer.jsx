@@ -53,14 +53,14 @@ export default function MainContainer({ currentUser }) {
           blogs={blogs}
             />
         </Route>
-        <Route path="/posts/:id">
-          <PostDetail 
-          currentUser={currentUser}
-          />
-        </Route>
         <Route path="/blogs/:id">
           <Campsite
             currentUser={currentUser}
+          />
+        </Route>
+        <Route path="/posts/:id">
+          <PostDetail 
+          currentUser={currentUser}
           />
         </Route>
         <Route path="/users/:id">
