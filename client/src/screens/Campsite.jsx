@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { getOneBlog } from "../services/blogs";
+// import { getOneBlog } from "../services/blogs";
 import { length } from '../services/interactionCount'
 import { createPost } from "../services/posts";
 import { togglePostLikes } from "../services/likes";
@@ -27,20 +27,20 @@ export default function Campsite({ currentUser }) {
     setPost(postData)
   }
 
-  useEffect(() => {
-    const fetchPost = async () => {
-      const blogData = await getOneBlog(id);
-      setPost(blogData);
-    };
-    fetchPost();
-  }, []);
+  // useEffect(() => {
+  //   const fetchPost = async () => {
+  //     const blogData = await getOneBlog(id);
+  //     setPost(blogData);
+  //   };
+  //   fetchPost();
+  // },[]);
 
 
   return (
     <div className="campsite">
       <div className="post_form">
         <div className="user_info">
-          <img src={currentUser?.avatar} alt="profile picture" />
+          <img src={currentUser?.avatar} alt="hffhfhfhf" />
           <p>{currentUser?.username}</p>
         </div>
 

@@ -8,12 +8,10 @@ import PostDetail from "../screens/PostDetail";
 import Profile from "../screens/Profile";
 
 import { getAllBlogs, createBlog, deleteblog } from "../services/blogs";
-import { getPost, deletePost, updatePost } from "../services/posts";
 
 
 export default function MainContainer({ currentUser }) {
   const [blogs, setBlogs] = useState([]);
-  const [post, setPost] = useState([]);
   const history = useHistory();
 
   useEffect(() => {
